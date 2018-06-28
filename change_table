@@ -1,0 +1,5 @@
+CREATE TABLE ROLE(id serial, name varchar(40), PRIMARY KEY(id));	
+INSERT INTO role(name) VALUES ('admin'), ('user'); 
+ALTER TABLE author add constraint fk_role FOREIGN KEY(role_id) references  role(id);
+ALTER table author add column login varchar(50), add column  password varchar(50);
+
